@@ -133,7 +133,7 @@ class Demo
         echo __FUNCTION__ . "<br>";
         return new I();
     }
-    public function typeNullReturnNull(): ?null
+    public function typeNullReturnNull(): null
     {
         echo __FUNCTION__ . "<br>";
         return null;
@@ -141,6 +141,7 @@ class Demo
 }
 
 $demo = new Demo();
+
 $demo->typeAReturnA();
 $demo->typeAReturnB();
 $demo->typeAReturnC();
