@@ -1,0 +1,219 @@
+@font-primary: "Nunito Sans", sans-serif;
+@font-secondary: "Montserrat", sans-serif;
+@color-primary: #171717;
+@color-secondary: #333;
+@color-border: #bfbfbf;
+@color-hover: #00d084;
+@color-social: #000;
+@color-social-hover: #6EC1E4;
+
+@spacing-small: 5px;
+@spacing-medium: 10px;
+@spacing-large: 20px;
+@spacing-xlarge: 25px;
+@spacing-xxlarge: 70px;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: @font-primary;
+    font-size: 18px;
+    line-height: 1.67em;
+    font-weight: 400;
+    background-color: #fff;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h5 {
+    font-family: @font-secondary;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: @color-primary;
+    font-size: 23px;
+    line-height: 1.3em;
+    margin: @spacing-large 0;
+    word-wrap: break-word;
+}
+
+#qodef-page-footer-top-area {
+    padding: @spacing-xlarge 0 @spacing-xxlarge;
+    background: center / cover no-repeat;
+    border-top: 0 solid @color-border;
+}
+
+.qodef-content-grid {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.qodef-grid {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+
+    & > .qodef-grid-inner {
+        margin: 0 -15px;
+    }
+
+    &.qodef-layout--columns {
+        &.qodef-col-num--2 > .qodef-grid-inner > .qodef-grid-item {
+            width: 50%;
+            padding: 0 15px;
+            float: left;
+            min-height: 1px;
+        }
+    }
+}
+
+.qodef-custom-footer-logo {
+    display: flex;
+
+    h5 {
+        margin: 21px 0 0 25px;
+    }
+}
+
+#qodef-page-footer-top-area .qodef-col-num--2 > .qodef-grid-inner > .qodef-grid-item:last-child {
+    text-align: right;
+}
+
+.qodef-separator {
+    position: relative;
+    height: auto;
+    line-height: 1;
+
+    .qodef-m-line {
+        display: inline-block;
+        width: 100%;
+        margin: @spacing-medium 0 6px;
+        border-bottom: 1px solid @color-border;
+        border-color: transparent;
+    }
+}
+
+p,
+a {
+    margin: @spacing-medium 0;
+    color: @color-primary;
+    text-decoration: none;
+    transition: color .2s ease-out;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #fff;
+    padding: @spacing-large;
+    border-top: 2px solid @color-border;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+
+    .column {
+        flex: 1;
+        margin: 0 20px;
+        padding-right: 20px;
+        position: relative;
+
+        &:not(:last-child) {
+            border-right: 2px solid @color-border;
+        }
+    }
+}
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        font-family: Crimson-Pro;
+        margin-bottom: 8px;
+        color: @color-secondary;
+        font-style: italic;
+
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: @color-hover;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.column {
+    p {
+        margin: @spacing-small 0;
+        color: @color-secondary;
+
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: @color-hover;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: @spacing-xxlarge;
+
+    a {
+        margin-right: 20px;
+        color: @color-social;
+        font-size: 20px;
+        text-decoration: none;
+
+        &:hover {
+            color: @color-social-hover;
+        }
+    }
+}
+
+.alright {
+    font-size: 13px;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-decoration-color: #8d8d8d;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
